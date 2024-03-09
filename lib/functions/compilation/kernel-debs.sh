@@ -405,7 +405,7 @@ function kernel_package_callback_linux_headers() {
 		# tools/include/tools has the byteshift utilities shared between kernel proper and the build scripts/tools.
 		# This replaces 'headers-debian-byteshift.patch' which was used for years in Armbian.
 		find tools -type f       # all tools; will trim a bit later
-		find arch/x86/lib/insn.c # required by objtool stuff...
+		#find arch/x86/lib/insn.c # required by objtool stuff...
 
 		if is_enabled CONFIG_GCC_PLUGINS; then
 			find scripts/gcc-plugins -name gcc-common.h # @TODO something else here too?
