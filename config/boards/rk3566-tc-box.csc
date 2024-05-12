@@ -7,7 +7,7 @@ BOOT_SOC="rk3566"
 KERNEL_TARGET="legacy"
 FULL_DESKTOP="yes"
 BOOT_LOGO="desktop"
-BOOT_FDT_FILE="rockchip/rk3566-box-demo-v10.dtb"
+BOOT_FDT_FILE="rockchip/rk3566-tc-box.dtb"
 IMAGE_PARTITION_TABLE="gpt"
 BOOT_SCENARIO="spl-blobs"
 
