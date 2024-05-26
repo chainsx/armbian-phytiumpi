@@ -20,3 +20,11 @@ function post_family_tweaks__station_m2() {
 
 	return 0
 }
+
+# Override family config for this board; let's avoid conditionals in family config.
+function post_family_config__stationm2_use_vendor_uboot() {
+	BOOTSOURCE='https://github.com/150balbes/u-boot-rk'
+	BOOTBRANCH='branch:rk356x'
+	BOOTDIR="u-boot-${BOARD}"
+	BOOTPATCHDIR="u-boot-station-p2"
+}
