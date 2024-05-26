@@ -11,6 +11,7 @@ SRC_EXTLINUX="yes"
 SRC_CMDLINE="console=ttyS02,1500000 console=tty0"
 ASOUND_STATE="asound.state.station-m2"
 IMAGE_PARTITION_TABLE="gpt"
+EXTRAWIFI="no"
 
 function post_family_tweaks__station_m2() {
     display_alert "$BOARD" "Installing board tweaks" "info"
