@@ -1,18 +1,18 @@
-# Rockchip RK3566 quad core 2GB-8GB GBE eMMC NVMe USB3 WiFi
-BOARD_NAME="Station M2 RK628"
+# Rockchip RK3566 quad core 1GB-2GB GBE eMMC NVMe USB3 WiFi
+BOARD_NAME="Taishan Pi"
 BOARDFAMILY="rk35xx"
 BOARD_MAINTAINER=""
 BOOTCONFIG="firefly-m2-rk3568_defconfig"
-KERNEL_TARGET="stable"
+KERNEL_TARGET="legacy"
 FULL_DESKTOP="yes"
 BOOT_LOGO="desktop"
-BOOT_FDT_FILE="rockchip/rk3566-firefly-roc-pc_tf-hdmi-mipi-rk628.dtb"
+BOOT_FDT_FILE="rockchip/rk3566-tspi-linux.dtb"
 SRC_EXTLINUX="yes"
 SRC_CMDLINE="console=ttyS02,1500000 console=tty0"
 ASOUND_STATE="asound.state.station-m2"
 IMAGE_PARTITION_TABLE="gpt"
 
-function post_family_tweaks__station_m2() {
+function post_family_tweaks__tspi() {
     display_alert "$BOARD" "Installing board tweaks" "info"
 
 	cp -R $SRC/packages/blobs/rtl8723bt_fw/* $SDCARD/lib/firmware/rtl_bt/
