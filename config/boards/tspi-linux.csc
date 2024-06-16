@@ -6,10 +6,9 @@ BOOTCONFIG="firefly-m2-rk3568_defconfig"
 KERNEL_TARGET="legacy"
 FULL_DESKTOP="yes"
 BOOT_LOGO="desktop"
-BOOT_FDT_FILE="rockchip/rk3566-tspi-linux.dtb"
+BOOT_FDT_FILE="rockchip/tspi-rk3566-user-v10-linux.dtb"
 SRC_EXTLINUX="yes"
-SRC_CMDLINE="console=ttyS02,1500000 console=tty0"
-ASOUND_STATE="asound.state.station-m2"
+SRC_CMDLINE="earlycon=uart8250,mmio32,0xfe660000 console=ttyFIQ0"
 IMAGE_PARTITION_TABLE="gpt"
 
 function post_family_tweaks__tspi() {
@@ -27,5 +26,7 @@ function post_family_config__tspi_use_vendor() {
 	BOOTBRANCH='branch:rk356x'
 	BOOTDIR="u-boot-${BOARD}"
 	BOOTPATCHDIR="u-boot-station-p2"
+	KERNELSOURCE='https://github.com/chainsx/kernel-tspi.git'
+	KERNELBRANCH='branch:main'
 	LINUXCONFIG="linux-tspi-${BRANCH}"
 }
