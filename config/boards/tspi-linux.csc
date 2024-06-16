@@ -22,9 +22,10 @@ function post_family_tweaks__tspi() {
 }
 
 # Override family config for this board; let's avoid conditionals in family config.
-function post_family_config__stationm2_use_vendor_uboot() {
+function post_family_config__tspi_use_vendor() {
 	BOOTSOURCE='https://github.com/150balbes/u-boot-rk'
 	BOOTBRANCH='branch:rk356x'
 	BOOTDIR="u-boot-${BOARD}"
 	BOOTPATCHDIR="u-boot-station-p2"
+	LINUXCONFIG="linux-tspi-${BRANCH}"
 }
