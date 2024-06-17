@@ -23,7 +23,8 @@ index e4c15af2c4..b17a8424d4 100644
 +CONFIG_BOOTCOMMAND="bootflow scan; run distro_bootcmd; echo Boot failed. Reset in 3 seconds...; sleep 3; reset;"
 +CONFIG_USE_PREBOOT=y
 +CONFIG_PREBOOT="usb start; pci enum"
- CONFIG_DEFAULT_FDT_FILE="rockchip/rk3566-radxa-zero3.dtb"
+-CONFIG_DEFAULT_FDT_FILE="rockchip/rk3566-radxa-zero3.dtb"
++CONFIG_DEFAULT_FDT_FILE="rockchip/rk3568-evb.dtb"
 +# CONFIG_SYS_DEVICE_NULLDEV is not set
  # CONFIG_DISPLAY_CPUINFO is not set
  CONFIG_DISPLAY_BOARDINFO_LATE=y
