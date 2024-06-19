@@ -10,15 +10,6 @@ WIREGUARD="no"
 IMAGE_PARTITION_TABLE="gpt"
 BOOTFS_TYPE="fat"
 
-function post_family_tweaks__tspi() {
-    display_alert "$BOARD" "Installing board tweaks" "info"
-
-	cp -R $SRC/packages/blobs/rtl8723bt_fw/* $SDCARD/lib/firmware/rtl_bt/
-	cp -R $SRC/packages/blobs/station/firmware/* $SDCARD/lib/firmware/
-
-	return 0
-}
-
 # Override family config for this board; let's avoid conditionals in family config.
 function post_family_config__tspi_use_vendor() {
 	BOOTSOURCE='https://github.com/radxa/u-boot.git'
