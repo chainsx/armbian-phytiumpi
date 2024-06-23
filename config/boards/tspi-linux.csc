@@ -9,6 +9,7 @@ BOOT_SCENARIO="spl-blobs"
 WIREGUARD="no"
 IMAGE_PARTITION_TABLE="gpt"
 BOOTFS_TYPE="fat"
+EXTRAWIFI="no"
 
 # Override family config for this board; let's avoid conditionals in family config.
 function post_family_config__tspi_use_vendor() {
