@@ -1,7 +1,7 @@
 new file mode 100644
 index 000000000..fac2db500
 --- /dev/null
-+++ b/arch/arm64/boot/dts/rockchip/rk3568-firefly-roc-pc.dts
++++ b/arch/arm64/boot/dts/rockchip/rk3568-roc-pc.dts
 @@ -0,0 +1,1044 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 +/*
